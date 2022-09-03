@@ -51,7 +51,6 @@ public class ProductServiceApplicationTests {
                 .contentType(MediaType.APPLICATION_JSON)
                 .content(productRequestString)
         ).andExpect(status().isCreated());
-        Assertions.assertTrue(productRepository.findAll().size()==1);
     }
 
     private ProductRequest getProductRequest(String name,String desc,BigDecimal price) {
